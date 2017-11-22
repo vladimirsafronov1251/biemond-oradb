@@ -146,12 +146,16 @@ define oradb::installdb(
         $total_files = 1
       }
 
-      if ( $version in ['11.2.0.1','12.1.0.1','12.1.0.2']) {
+      if ( $version in ['11.2.0.1','12.1.0.1']) {
         $file1 = "${file}_1of2.zip"
         $file2 = "${file}_2of2.zip"
         $total_files = 2
       }
-
+	  if ( $version in ['12.1.0.2']) {
+        $file1 = "${file}_1of8.zip"
+        $file2 = "${file}_2of8.zip"
+        $total_files = 2
+      }
       if ( $version in ['11.2.0.3','11.2.0.4']) {
         $file1 = "${file}_1of7.zip"
         $file2 = "${file}_2of7.zip"
