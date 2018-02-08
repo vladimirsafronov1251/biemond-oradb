@@ -3,19 +3,19 @@
    <CommonAttributes>
       <option name="OMS" value="false"/>
       <option name="JSERVER" value="true"/>
-      <option name="SPATIAL" value="false"/>
-      <option name="IMEDIA" value="false"/>
-      <option name="ORACLE_TEXT" value="false">
+      <option name="SPATIAL" value="true"/>
+      <option name="IMEDIA" value="true"/>
+      <option name="ORACLE_TEXT" value="true">
          <tablespace id="SYSAUX"/>
       </option>
       <option name="XDB_PROTOCOLS" value="true">
          <tablespace id="SYSAUX"/>
       </option>
-      <option name="CWMLITE" value="false">
+      <option name="CWMLITE" value="true">
          <tablespace id="SYSAUX"/>
       </option>
       <option name="SAMPLE_SCHEMA" value="false"/>
-      <option name="APEX" value="false"/>
+      <option name="APEX" value="true"/>
       <option name="DV" value="false"/>
    </CommonAttributes>
    <Variables/>
@@ -35,7 +35,6 @@
          <initParam name="audit_trail" value="none"/>
          <initParam name="db_block_size" value="8" unit="KB"/>
          <initParam name="open_cursors" value="300"/>
-         <initParam name="memory_target" value="<%= @memory_total %>" unit="MB"/>
          <initParam name="job_queue_processes" value="4"/>
          <initParam name="db_recovery_file_dest_size" value="1" unit="GB"/>
          <initParam name="db_recovery_file_dest" value="<%= @recovery_area_destination %>"/>
